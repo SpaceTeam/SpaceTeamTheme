@@ -28,7 +28,7 @@ function toggleTheme()
     if (theme.getAttribute('href') == `${__pathOffset}themes/${__themes[0]['theme']}.css`)
     {
         newTheme = __themes[1]['theme'];
-        newIcon = __theme[0]['icon'];
+        newIcon = __themes[0]['icon'];
     } 
     else if (theme.getAttribute('href') == `${__pathOffset}themes/${__themes[1]['theme']}.css`)
     {
