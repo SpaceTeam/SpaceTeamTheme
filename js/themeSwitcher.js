@@ -46,7 +46,7 @@ function toggleTheme()
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme, type: newType}});
 
     __subscribers.forEach((subscriber) => {
-        subscriber["elem"].dispatchEvent(event);
+        subscriber.dispatchEvent(event);
     });
 }
 
