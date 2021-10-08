@@ -7,6 +7,7 @@ function initThemes(pathOffset, themes)
 {
     __pathOffset = pathOffset;
     __themes = themes;
+    theme.setAttribute('href', `${pathOffset}themes/${__themes[0]['theme']}.css`);
 }
 
 //theme is a dict of an icon (string) and the name of the theme file (without .css)
