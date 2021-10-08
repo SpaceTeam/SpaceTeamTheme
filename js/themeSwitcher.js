@@ -25,15 +25,23 @@ function createThemeSwitcher()
 function toggleTheme()
 {
     let themeSwitcherButton = $(document).find("button#themeSwitcher");
-    //TODO: fetch prefix path first
+    let newTheme;
+    let newIcon;
     if (theme.getAttribute('href') == `${pathOffset}themes/${__themes[0]['theme']}.css`)
     {
-        theme.setAttribute('href', `${pathOffset}themes/${__themes[1]['theme']}.css`);
-        themeSwitcherButton.html(`<i class="bi bi-${__theme[0]['icon']}"></i>`);
+        newTheme = __themes[1]['theme'];
+        newIcon = __theme[0]['icon'];
     } 
     else if (theme.getAttribute('href') == `${pathOffset}themes/${__themes[1]['theme']}.css`)
     {
-        theme.setAttribute('href', `${pathOffset}themes/${__themes[0]['theme']}.css`);
-        themeSwitcherButton.html(`<i class="bi bi-${__themes[1]['icon']}"></i>`);
+        newTheme = __themes[0]['theme'];
+        newIcon = __themes[1]['icon'];
     }
+
+    theme.setAttribute('href', `${pathOffset}themes/${newTheme}.css`);
+    themeSwitcherButton.html(`<i class="bi bi-${newIcon}"></i>`);
+
+    const event = new CustomEvent('themeToggle', {detail: {theme: newTheme}});
+    themeSwitcherButton.dispatchEvent(event);
+
 }
