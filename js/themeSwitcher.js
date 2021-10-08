@@ -14,11 +14,9 @@ function initThemes(pathOffset, themes)
 //change behaviour if more than two themes are given (dropdown or the like)
 function createThemeSwitcher()
 {
-    let themeButtonHtml = `<div>
-        <button type="button" id="themeSwitcher" class="btn btn-outline-secondary" onclick="toggleTheme()">
-            <i class="bi bi-${__themes[1]['icon']}"></i>
-        </button>
-    </div>`;
+    let themeButtonHtml = `<button type="button" id="themeSwitcher" class="btn btn-outline-secondary" onclick="toggleTheme()">
+    <i class="bi bi-${__themes[1]['icon']}"></i>
+</button>`;
     return themeButtonHtml;
 }
 
@@ -43,5 +41,4 @@ function toggleTheme()
 
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme}});
     themeSwitcherButton.dispatchEvent(event);
-
 }
