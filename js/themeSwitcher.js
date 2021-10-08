@@ -40,5 +40,6 @@ function toggleTheme()
     themeSwitcherButton.html(`<i class="bi bi-${newIcon}"></i>`);
 
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme}});
-    themeSwitcherButton.dispatchEvent(event);
+    dispatchEvent(event);
+
 }
