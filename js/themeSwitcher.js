@@ -46,17 +46,18 @@ function toggleTheme()
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme, type: newType}});
 
     __subscribers.forEach((subscriber) => {
+        console.log("dispatched event to", subscriber);
         subscriber.dispatchEvent(event);
     });
 }
 
-function subscribe(elem, listener)
+function themeSubscribe(elem, listener)
 {
     //this implementation doesn't allow the same element to subscribe with two listeners - would I ever want that? if so, it could be handled by a "wrapper listener" that pushes the event to other "sub listeners"
-    if (!__subscribers.includes(elem))
+    if (!__subscribers.includes(elem[0]))
     {
-        elem.addEventListener("themeToggle", listener);
-        __subscribers.push(elem);
+        elem[0].addEventListener("themeToggle", listener);
+        __subscribers.push(elem[0]);
         return true;
     }
     return false;
