@@ -1,24 +1,24 @@
 var __pathOffset;
 var __themes;
-var __themePrimary;
-var __themeSecondary;
 var __subscribers = [];
 
-function initThemes(pathOffset, themes)
+//theme is a dict of an icon (string), the name of the theme file (without .css) and the type (light, dark, in future maybe more?)
+//change behaviour if more than two themes are given (dropdown or the like)
+function setInitialTheme(pathOffset, themes)
 {
     __pathOffset = pathOffset;
     __themes = themes;
     theme.setAttribute('href', `${__pathOffset}themes/${__themes[0]['theme']}.css`);
 }
 
-//theme is a dict of an icon (string) and the name of the theme file (without .css)
-//change behaviour if more than two themes are given (dropdown or the like)
-function createThemeSwitcher()
+function initThemes(switcherContainer, pathOffset, themes)
 {
+    setInitialTheme(pathOffset, themes);
     let themeButtonHtml = `<button type="button" id="themeSwitcher" class="btn btn-outline-secondary" onclick="toggleTheme()">
     <i class="bi bi-${__themes[1]['icon']}"></i>
 </button>`;
-    return themeButtonHtml;
+    switcherContainer.append(themeButtonHtml);
+    //$(document.body).append(themeSwitcherDiv);
 }
 
 function toggleTheme()
