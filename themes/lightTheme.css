@@ -10,6 +10,8 @@
     
     --accent-primary: #522e63;
     --accent-secondary: #7d4696;
+    --accent-hover: #482859;
+    --accent-active: var(--accent-hover);
     --accent-disabled: #b797c6;
     
     /*base PnID state colours*/
@@ -31,7 +33,7 @@
     
     /*derived variables*/
     --default-stroke: var(--content-primary);
-    --slider-text: var(--background-secondary);
+    --accented-text: var(--background-secondary);
 }
 
 .panel-container

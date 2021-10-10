@@ -1,15 +1,17 @@
 :root {
     /*base UI colours*/
     --background-primary: #2d2d2d;
-    --background-secondary: #2d2d2d;
+    --background-secondary: #3d3d3d;
     --background-tertiary: #666666;
     
     --content-primary: #eeeeee;
     --content-secondary: #bbbbbb;
     --content-disabled: #777777;
     
-    --accent-primary: #7d4696;
+    --accent-primary: #633878;
     --accent-secondary: #522e63;
+    --accent-hover: #76438f;
+    --accent-active: var(--accent-hover);
     --accent-disabled: #b797c6;
     
     /*base PnID state colours*/
@@ -30,17 +32,12 @@
     
     /*derived variables*/
     --default-stroke: var(--content-primary);
-    --slider-text: var(--content-primary);
+    --accented-text: var(--content-primary);
 }
 
 img 
 {
     filter: invert(100%);
-}
-
-.tab-button, .tab-button:hover
-{
-    color: white;
 }
 
 #statusBar
