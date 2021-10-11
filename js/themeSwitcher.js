@@ -46,9 +46,22 @@ function toggleTheme()
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme, type: newType}});
 
     __subscribers.forEach((subscriber) => {
-        console.log("dispatched event to", subscriber);
+        //console.log("dispatched event to", subscriber);
         subscriber.dispatchEvent(event);
     });
+}
+
+function getActiveTheme()
+{
+    if (theme.getAttribute('href') == `${__pathOffset}themes/${__themes[0]['theme']}.css`)
+    {
+        return __themes[0];
+    }
+    else if (theme.getAttribute('href') == `${__pathOffset}themes/${__themes[1]['theme']}.css`)
+    {
+        return __themes[1];
+    }
+    return undefined;
 }
 
 function themeSubscribe(elem, listener)
@@ -58,6 +71,9 @@ function themeSubscribe(elem, listener)
     {
         elem[0].addEventListener("themeToggle", listener);
         __subscribers.push(elem[0]);
+        let theme = getActiveTheme();
+        const event = new CustomEvent('themeToggle', {detail: {theme: theme['theme'], type: theme['type']}});
+        elem[0].dispatchEvent(event);
         return true;
     }
     return false;

@@ -13,6 +13,9 @@
     --accent-hover: #482859;
     --accent-active: var(--accent-hover);
     --accent-disabled: #b797c6;
+
+    --warning-color: #ffcd00;
+    --error-color: red;
     
     /*base PnID state colours*/
     --pnid-outline: blue;
