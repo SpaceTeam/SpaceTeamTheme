@@ -16,6 +16,8 @@
 
     --warning-color: orange;
     --error-color: red;
+
+    --debug: #fbff00;
     
     /*base PnID state colours*/
     --pnid-outline: #4e99fc;
