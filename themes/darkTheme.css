@@ -30,6 +30,11 @@
     --low: #00aeff;
     --neutral: green;
 
+    --high-water-tank: black;
+    --mid-water-tank: black;
+    --low-water-tank: black;
+    --neutral-water-tank: white;
+
     --fuel: chocolate;
     --ox: #3e87a1;
     
