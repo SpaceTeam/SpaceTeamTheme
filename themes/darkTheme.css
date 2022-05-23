@@ -40,6 +40,8 @@
     
     --on: orange;
     --powered: #601a00;
+
+    --flowchart-state-on: orange;
     
     /*derived variables*/
     --default-stroke: var(--content-primary);
