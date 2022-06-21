@@ -30,6 +30,14 @@
     --low: blue;
     --neutral: green;
 
+    --battery_high: orange;
+    --battery_nominal: green;
+    --battery_low: orange;
+    --battery_critcal: red;
+
+    --medium-letters: 12rem;
+    --big-letters: 24rem;
+
     --high-water-tank: white;
     --mid-water-tank: white;
     --low-water-tank: white;
