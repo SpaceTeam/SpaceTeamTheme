@@ -8,6 +8,20 @@ function setInitialTheme(pathOffset, themes)
 {
     __pathOffset = pathOffset;
     __themes = themes;
+    storedTheme = window.localStorage.getItem("theme");
+    if (storedTheme != undefined)
+    {
+        for (let themeData of __themes)
+        {
+            console.log("testing", themeData);
+            if (themeData["theme"] == storedTheme)
+            {
+                theme.setAttribute('href', `${__pathOffset}themes/${storedTheme}.css`);
+                return
+            }
+        }
+    }
+    //if no stored theme is set or the stored theme doesn't match any known, set a default theme
     theme.setAttribute('href', `${__pathOffset}themes/${__themes[0]['theme']}.css`);
 }
 
@@ -41,6 +55,7 @@ function toggleTheme()
     }
 
     theme.setAttribute('href', `${__pathOffset}themes/${newTheme}.css`);
+    window.localStorage.setItem("theme", newTheme);
     themeSwitcherButton.html(`<i class="bi bi-${newIcon}"></i>`);
 
     const event = new CustomEvent('themeToggle', {detail: {theme: newTheme, type: newType}});
