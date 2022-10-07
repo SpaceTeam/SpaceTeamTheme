@@ -31,10 +31,10 @@
     --low: blue;
     --neutral: green;
 
-    --battery_high: orange;
-    --battery_nominal: green;
-    --battery_low: orange;
-    --battery_critcal: red;
+    --battery-high: orange;
+    --battery-nominal: green;
+    --battery-low: orange;
+    --battery-critcal: red;
 
     --medium-letters: 12rem;
     --big-letters: 24rem;
