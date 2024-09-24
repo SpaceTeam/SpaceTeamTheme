@@ -50,7 +50,9 @@
     --on: orange;
     --powered: #601a00;
 
-    --flowchart-state-on: orange;
+    --flowchart-state-good: green;
+    --flowchart-state-bad: orange;
+    --flowchart-state-unknown: red;
     
     /*derived variables*/
     --default-stroke: var(--content-primary);
