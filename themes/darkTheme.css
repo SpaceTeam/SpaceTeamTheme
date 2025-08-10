@@ -1,7 +1,7 @@
 :root {
     /*base UI colours*/
-    --background-primary: #2d2d2d;
-    --background-secondary: #3d3d3d;
+    --background-primary: #232323;
+    --background-secondary: #363636;
     --background-tertiary: #666666;
     
     --content-primary: #eeeeee;
@@ -15,7 +15,7 @@
     --accent-disabled: #b797c6;
 
     --warning-color: orange;
-    --error-color: red;
+    --error-color: #ff4040;
     --success-color: green;
 
     --debug: #fbff00;
@@ -26,7 +26,7 @@
     --open: #00aeff;
     --closed: orange;
     --undefined: gray;
-    --high: red;
+    --high: #ff4040;
     --mid: #ffc004;
     --low: #00aeff;
     --neutral: green;
@@ -34,7 +34,7 @@
     --battery-high: orange;
     --battery-nominal: green;
     --battery-low: orange;
-    --battery-critical: red;
+    --battery-critical: #ff4040;
 
     --medium-letters: 12rem;
     --big-letters: 24rem;
@@ -52,7 +52,7 @@
 
     --flowchart-state-good: green;
     --flowchart-state-bad: orange;
-    --flowchart-state-unknown: red;
+    --flowchart-state-unknown: #ff4040;
     
     /*derived variables*/
     --default-stroke: var(--content-primary);
