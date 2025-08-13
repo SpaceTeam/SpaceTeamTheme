@@ -16,7 +16,7 @@
 
     --warning-color: orange;
     --error-color: #ff4040;
-    --success-color: green;
+    --success-color: #33cc33;
 
     --debug: #fbff00;
     
@@ -29,10 +29,10 @@
     --high: #ff4040;
     --mid: #ffc004;
     --low: #00aeff;
-    --neutral: green;
+    --neutral: #33cc33;
 
     --battery-high: orange;
-    --battery-nominal: green;
+    --battery-nominal: #33cc33;
     --battery-low: orange;
     --battery-critical: #ff4040;
 
@@ -50,7 +50,7 @@
     --on: orange;
     --powered: #601a00;
 
-    --flowchart-state-good: green;
+    --flowchart-state-good: #33cc33;
     --flowchart-state-bad: orange;
     --flowchart-state-unknown: #ff4040;
     
