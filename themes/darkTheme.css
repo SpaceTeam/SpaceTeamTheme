@@ -31,6 +31,7 @@
     --low: #00aeff;
     --neutral: #33cc33;
 
+    --battery-charging: blue;
     --battery-high: orange;
     --battery-nominal: #33cc33;
     --battery-low: orange;
